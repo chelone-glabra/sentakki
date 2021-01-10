@@ -12,12 +12,14 @@ using osu.Game.Configuration;
 using osu.Game.Overlays.Settings;
 using osu.Game.Rulesets.Configuration;
 using osu.Game.Rulesets.Difficulty;
+using osu.Game.Rulesets.Edit;
 using osu.Game.Rulesets.Mods;
 using osu.Game.Rulesets.Replays.Types;
 using osu.Game.Rulesets.Scoring;
 using osu.Game.Rulesets.Sentakki.Beatmaps;
 using osu.Game.Rulesets.Sentakki.Configuration;
 using osu.Game.Rulesets.Sentakki.Difficulty;
+using osu.Game.Rulesets.Sentakki.Edit;
 using osu.Game.Rulesets.Sentakki.Mods;
 using osu.Game.Rulesets.Sentakki.Objects;
 using osu.Game.Rulesets.Sentakki.Replays;
@@ -51,6 +53,8 @@ namespace osu.Game.Rulesets.Sentakki
             new SentakkiDifficultyCalculator(this, beatmap);
 
         public override IConvertibleReplayFrame CreateConvertibleReplayFrame() => new SentakkiReplayFrame();
+
+        public override HitObjectComposer CreateHitObjectComposer() => new SentakkiHitObjectComposer(this);
 
         public override IEnumerable<Mod> GetModsFor(ModType type)
         {

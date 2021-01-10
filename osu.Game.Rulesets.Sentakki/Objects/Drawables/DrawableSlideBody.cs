@@ -130,6 +130,7 @@ namespace osu.Game.Rulesets.Sentakki.Objects.Drawables
         protected override void UpdateInitialTransforms()
         {
             base.UpdateInitialTransforms();
+
             Slidepath.PerformEntryAnimation(AdjustedAnimationDuration);
             using (BeginAbsoluteSequence(HitObject.StartTime - 50, true))
             {
