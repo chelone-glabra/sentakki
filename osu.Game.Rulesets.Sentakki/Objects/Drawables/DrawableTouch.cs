@@ -80,7 +80,6 @@ namespace osu.Game.Rulesets.Sentakki.Objects.Drawables
 
         protected override void Update()
         {
-            Position = HitObject.Position;
             base.Update();
             int count = 0;
 

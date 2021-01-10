@@ -7,17 +7,15 @@ using osu.Game.Beatmaps;
 using osu.Game.Beatmaps.ControlPoints;
 using osu.Game.Rulesets.Judgements;
 using osu.Game.Rulesets.Objects;
-using osu.Game.Rulesets.Objects.Types;
 using osu.Game.Rulesets.Scoring;
 using osu.Game.Rulesets.Sentakki.Judgements;
 using osu.Game.Rulesets.Sentakki.Scoring;
 using osu.Game.Utils;
 using osuTK.Graphics;
-using osuTK;
 
 namespace osu.Game.Rulesets.Sentakki.Objects
 {
-    public abstract class SentakkiHitObject : HitObject, IHasPosition
+    public abstract class SentakkiHitObject : HitObject
     {
         public bool HasTwin { get; set; }
 
@@ -29,11 +27,6 @@ namespace osu.Game.Rulesets.Sentakki.Objects
             get => ColourBindable.Value;
             private set => ColourBindable.Value = value;
         }
-
-        // This section is required just so editor actually starts
-        public Vector2 Position { get; set; } = Vector2.Zero;
-        public float X => Position.X;
-        public float Y => Position.Y;
 
         protected virtual Color4 DefaultNoteColour => Color4Extensions.FromHex("FF0064");
 
