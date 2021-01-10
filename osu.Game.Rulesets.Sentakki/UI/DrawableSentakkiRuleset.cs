@@ -20,7 +20,7 @@ namespace osu.Game.Rulesets.Sentakki.UI
     [Cached]
     public class DrawableSentakkiRuleset : DrawableRuleset<SentakkiHitObject>
     {
-        public DrawableSentakkiRuleset(SentakkiRuleset ruleset, IBeatmap beatmap, IReadOnlyList<Mod> mods)
+        public DrawableSentakkiRuleset(Ruleset ruleset, IBeatmap beatmap, IReadOnlyList<Mod> mods)
             : base(ruleset, beatmap, mods)
         {
             foreach (var mod in Mods.OfType<IApplicableToTrack>())
